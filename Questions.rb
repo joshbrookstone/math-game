@@ -1,12 +1,19 @@
 class Questions
-
-
-  def Question
-    #this will be a question with simple math. so possible like a random number generator
+  
+  def initialize
+    @firstNumber = rand(1..20)
+    @secondNumber = rand(1..20)
+    @real_answer = @firstNumber + @secondNumber
   end
 
-  # we need to find the answer to question. so store it in a variable?
+  def compare_answer(answer)
+    answer == @real_answer
+  end
+
+  def ask_question
+    "What is #{@firstNumber} plus #{@secondNumber} equal?"
+
+  end
 
 end
 
-# these will be the possible questions in the game
